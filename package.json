@@ -1,8 +1,8 @@
 {
   "name": "@griffian/common-utils",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A library of commonly used functions",
-  "main": "index.ts",
+  "main": "dist/index.js",
   "scripts": {
     "test": "jest --watch --coverage",
     "build": "tsc"
