@@ -1,5 +1,5 @@
 {
-  "name": "common-utils",
+  "name": "@griffian/common-utils",
   "version": "0.1.0",
   "description": "A library of commonly used functions",
   "main": "index.ts",
