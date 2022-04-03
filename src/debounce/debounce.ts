@@ -1,20 +1,11 @@
-const debounce = (
-  callback: Function,
-  timeout: number,
-  immediate: boolean = false,
-  ...args: any | null
-): Function => {
+const debounce = (callback: Function, timeout: number): Function => {
   let timer: ReturnType<typeof setTimeout>;
-  if (immediate) {
-    return (...args: any) => {
-      callback.apply(this, ...args);
-    };
-  } else {
-    return (...args: any) => {
-      clearTimeout(timer);
-      timer = setTimeout(() => callback.apply(this, ...args), timeout);
-    };
-  }
+  return (immediate: boolean = false, ...args: any | null) => {
+    clearTimeout(timer);
+    if (immediate) {
+      callback.apply(this, ...args), timeout;
+    } else timer = setTimeout(() => callback.apply(this, ...args), timeout);
+  };
 };
 
 export default debounce;

@@ -15,9 +15,9 @@ describe("Debounce", () => {
 
   it("should call the function immediately when passing immediate flag", () => {
     const callbackFunc = jest.fn();
-    const debouncedFunc = debounce(callbackFunc, 300, true);
+    const debouncedFunc = debounce(callbackFunc, 300);
     for (let i = 0; i < 5; i++) {
-      debouncedFunc();
+      debouncedFunc(true);
     }
     jest.runAllTimers();
     expect(callbackFunc).toBeCalledTimes(5);
