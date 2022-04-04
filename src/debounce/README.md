@@ -7,15 +7,17 @@ This function will return another function that debounces any function you first
 ```js
 import { cu_debounce } from "@griffian/common-utils";
 
-const myFunction = (params = true) => console.log(params);
+const myFunction = () => arguments;
 
-const myDebouncedFunction = cu_debounce(myFunction, 300, false, 1);
+// Returns a debounce that will call your callback in 300ms after the last call
+const myDebouncedFunction = cu_debounce(myFunction, 300);
 
 myDebouncedFunction();
 myDebouncedFunction();
-myDebouncedFunction();
-myDebouncedFunction();
-// Logs 1 one time to the console
+// Clears the previous timeout and calls function immediately with 1 as a param
+myDebouncedFunction(true, 1);
+// Adds another debounced call that will get called with 1 if no other calls happen
+myDebouncedFunction(false, 1);
 ```
 
 ## Parameters

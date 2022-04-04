@@ -22,4 +22,14 @@ describe("Debounce", () => {
     jest.runAllTimers();
     expect(callbackFunc).toBeCalledTimes(5);
   });
+
+  it("should call with my parameters", () => {
+    const myFunction = jest.fn();
+    const myDebouncedFunction = debounce(myFunction, 300);
+    myDebouncedFunction(true, 1);
+    myDebouncedFunction(false, 1);
+    jest.runAllTimers();
+    expect(myFunction).toBeCalledTimes(2);
+    expect(myFunction).toHaveBeenCalledWith(1);
+  });
 });
