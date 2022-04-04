@@ -9,3 +9,6 @@ Each function is written in typescript, and fully unit tested. These are compile
 - [Debounce](/src/debounce/)
 - [Generate Random Hex Color](/src/generate-random-hex-color/)
 - [Simple Deep Copy](/src/simple-deep-copy/)
+
+## Project Management
+Issues will get added to the [Common Utils Project Board](https://github.com/users/agriffi10/projects/3/views/1). This is not only used for issue tracking, but also to determine new features.
