@@ -24,5 +24,14 @@ You should start by assigning the issue to yourself from the issues page, and us
 
 Your branch should follow the following convention `type/{ticket-num}-title`. For example `feature/11-document-cookie-functions`. The title of your branch does not need to match the exact ticket title, but should at least do a good job representing it.
 
+### Required Items
 
 If you're planning on making a pull request, please allow us time to review what it is you're working on, and allow any discussions to resolve.
+
+When submitting code, there are several items that are required or else your pull request will be denied:
+
+- A new folder containing your changes.
+- Your code file written in typescript.
+- A test file that provides 90% or greater coverage for your code.
+- A README with your code that describes how to import and use the functions you've created.
+- Updating the base repo README with a link to your new folder in alphabetical order.
